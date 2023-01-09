@@ -6,6 +6,7 @@ import About from "./Component/About";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Component/ErrorPage";
+import FileUpload from "./Component/FileUpload";
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "*",
-    element: <App />,
+    path: "/fileupload",
+    element: <FileUpload />,
     errorElement: <ErrorPage />,
   },
+  // {
+  //   path: "*",
+  //   element: <App />,
+  //   errorElement: <ErrorPage />,
+  // },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
